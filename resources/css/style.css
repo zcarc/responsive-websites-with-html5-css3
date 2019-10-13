@@ -243,6 +243,16 @@ header {
 
 
 /* ------------------------------------------------------*/
+/* FEATURES */
+/* ------------------------------------------------------*/
+
+.section-features .long-copy {
+    
+    margin-bottom: 40px;
+}
+
+
+/* ------------------------------------------------------*/
 /* MEALS */
 /* ------------------------------------------------------*/
 
@@ -266,10 +276,28 @@ header {
     
     
     margin: 0;
+    
+    /* img의 scale을 늘렸을 때 상위 태그 바깥으로 벗어나서 overflow: hidden; 으로 해준다. */
+    overflow: hidden;
+    
+    /* 이미지의 뒷배경색을 검정색으로 바꾸기 위해서 상위 태그의 색상을 변경한다. */
+    /* 이유는 이미지의 불투명도가 낮아지면 상위 태그의 배경색이 보여지기 때문이다.*/
+    background-color: #000;
 }
 
 .meal-photo img {
     
+    opacity: 0.7;
     width: 100%;
     height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    
+}
+
+.meal-photo img:hover {
+    
+    opacity: 1;
+    transform: scale(1.03);
+    
 }
