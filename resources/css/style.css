@@ -71,7 +71,7 @@ h1 {
     font-size: 240%;
     
     /* 문자열 단위 간의 간격 (문자 간격) */
-    word-spacing 4px;
+    word-spacing: 4px;
     
     /* 스펠링 단위 간의 간격 (자간) 참고: https://blog.naver.com/anedthh/221371517278 */
     letter-spacing: 1px;
@@ -187,7 +187,7 @@ h2:after {
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
     background-size: cover;
-    background-position:center;
+    background-position: center;
     height: 100vh;
 }
 
@@ -239,4 +239,37 @@ header {
     
     border-bottom: 2px solid #e67e22;
     
+}
+
+
+/* ------------------------------------------------------*/
+/* MEALS */
+/* ------------------------------------------------------*/
+
+.meals-showcase {
+    
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    
+    /* 여기서의 폭 100%는 부모 태그인 li의 전체 넓이이다. */
+    width: 100%;
+    
+    
+    margin: 0;
+}
+
+.meal-photo img {
+    
+    width: 100%;
+    height: auto;
 }
