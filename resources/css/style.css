@@ -234,6 +234,9 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    
+    /* 스크롤을 움직여도 보여지는 이미지는 고정된다. */
+    background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -430,4 +433,59 @@ header {
 .city-features {
     
     margin-bottom: 5px;
+}
+
+
+/* ------------------------------------------------------*/
+/* TESTIMONIALS */
+/* ------------------------------------------------------*/
+
+.section-testimonials {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    
+    /* 스크롤을 움직여도 보여지는 이미지는 고정된다. */
+    background-attachment: fixed;
+}
+
+blockquote {
+    
+    padding: 2%;
+    font-size: 99%;
+    font-style: italic;
+    line-height: 145%;
+    margin-top: 40px;
+    
+    /* 이 속성을 지정하지 않으면 :before 가상태그의 "position: absolute;" 가 다른 곳에 있게된다. */
+    position: relative;
+}
+
+blockquote:before {
+    
+    /* 큰따옴표와 같은 기호를 사용하기 위해서 ISO 특수문자를 사용해야한다. 참고: https://css-tricks.com/snippets/html/glyphs/ */
+    content: "\201C";
+    font-size: 400%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+    /* 이미지와 글자의 수직을 가운데 정렬 */
+    vertical-align: middle;
 }
